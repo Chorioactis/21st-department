@@ -9,17 +9,21 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include" />
         <e p="Data" t="Include">
           <e p="Interfaces" t="Include" />
-          <e p="mocks" t="Include" />
-          <e p="Models" t="Include">
-            <e p="Product.cs" t="Include" />
-            <e p="PurchasedProduct.cs" t="Include" />
-            <e p="Request.cs" t="Include" />
-            <e p="Tag.cs" t="Include" />
-            <e p="Theme.cs" t="Include" />
-            <e p="User.cs" t="Include" />
-          </e>
+          <e p="Repository" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Product.cs" t="Include" />
+          <e p="ProductComposition.cs" t="Include" />
+          <e p="PurchasedProduct.cs" t="Include" />
+          <e p="Request.cs" t="Include" />
+          <e p="RequestComposition.cs" t="Include" />
+          <e p="Tag.cs" t="Include" />
+          <e p="Theme.cs" t="Include" />
+          <e p="ThemeComposition.cs" t="Include" />
+          <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -33,6 +37,12 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="Views" t="Include">
+          <e p="Products" t="Include" />
+          <e p="PurchasedProducts" t="Include" />
+          <e p="Themes" t="Include" />
+        </e>
+        <e p="web.config" t="Include" />
         <e p="WebApp.csproj" t="IncludeRecursive" />
       </e>
       <e p="WebApp.sln" t="IncludeFlat" />

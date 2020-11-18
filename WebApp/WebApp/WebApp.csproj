@@ -5,13 +5,22 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="EntityFramework6.Npgsql" Version="6.4.1" />
+      <PackageReference Include="JSON" Version="1.0.1" />
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
       <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+      <PackageReference Include="Npgsql" Version="5.0.0" />
+      <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Controllers" />
       <Folder Include="Data\interfaces" />
-      <Folder Include="Data\mocks" />
+      <Folder Include="Data\repository" />
+      <Folder Include="Views\Products" />
+      <Folder Include="Views\PurchasedProducts" />
+      <Folder Include="Views\Themes" />
     </ItemGroup>
 
 </Project>

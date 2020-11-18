@@ -26,6 +26,14 @@
   "frameworks": {
     "netcoreapp3.1": {
       "dependencies": {
+        "EntityFramework6.Npgsql": {
+          "target": "Package",
+          "version": "[6.4.1, )"
+        },
+        "JSON": {
+          "target": "Package",
+          "version": "[1.0.1, )"
+        },
         "Microsoft.AspNetCore.Mvc.Core": {
           "target": "Package",
           "version": "[2.2.5, )"
@@ -33,6 +41,18 @@
         "Microsoft.AspNetCore.StaticFiles": {
           "target": "Package",
           "version": "[2.2.0, )"
+        },
+        "Microsoft.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "[5.0.0, )"
+        },
+        "Npgsql": {
+          "target": "Package",
+          "version": "[5.0.0, )"
+        },
+        "System.ComponentModel.Annotations": {
+          "target": "Package",
+          "version": "[5.0.0, )"
         }
       },
       "imports": [
