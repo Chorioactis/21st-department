@@ -1,17 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+
+#nullable disable
 
 namespace WebApp.Models
 {
-    public class Request
+    public partial class Request
     {
-        public int Id { get; set; }
-        [StringLength(20)]
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime CreationDate { get; set; }
-        public int CreatedBy { get; set; }
-        public virtual ICollection<RequestComposition> PurchasedProducts { get; set; }
+        public Request()
+        {
+            RequestCompositions = new HashSet<RequestComposition>();
+        }
+
+        public int RequestId { get; set; }
+        public string RequestName { get; set; }
+        public string RequestDescription { get; set; }
+        public DateTime RequestCreationDate { get; set; }
+        public int? RequestCreatedBy { get; set; }
+
+        public virtual User RequestCreatedByNavigation { get; set; }
+        public virtual ICollection<RequestComposition> RequestCompositions { get; set; }
     }
 }

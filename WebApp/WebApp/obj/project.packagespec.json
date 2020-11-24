@@ -10,6 +10,7 @@
       "netcoreapp3.1"
     ],
     "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
@@ -26,10 +27,6 @@
   "frameworks": {
     "netcoreapp3.1": {
       "dependencies": {
-        "EntityFramework6.Npgsql": {
-          "target": "Package",
-          "version": "[6.4.1, )"
-        },
         "JSON": {
           "target": "Package",
           "version": "[1.0.1, )"
@@ -46,11 +43,19 @@
           "target": "Package",
           "version": "[5.0.0, )"
         },
-        "Npgsql": {
+        "Microsoft.EntityFrameworkCore.Design": {
+          "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+          "suppressParent": "All",
           "target": "Package",
           "version": "[5.0.0, )"
         },
-        "System.ComponentModel.Annotations": {
+        "Microsoft.EntityFrameworkCore.Tools": {
+          "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[5.0.0, )"
+        },
+        "Npgsql.EntityFrameworkCore.PostgreSQL": {
           "target": "Package",
           "version": "[5.0.0, )"
         }
@@ -73,7 +78,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Users\\admal\\.dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
     }
   }
 }

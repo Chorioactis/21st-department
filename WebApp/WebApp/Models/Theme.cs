@@ -1,20 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+
+#nullable disable
 
 namespace WebApp.Models
 {
-    public class Theme
+    public partial class Theme
     {
-        public int Id { get; set; }
-        [StringLength(20)]
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime CreationDate { get; set; }
-        public int CreatedBy { get; set; }
-        public bool Deleted { get; set; }
-        public DateTime DeletionDate { get; set; }
-        public int DeletedBy { get; set; }
-        public virtual ICollection<ThemeComposition> Products { get; set; }
+        public Theme()
+        {
+            ThemeCompositions = new HashSet<ThemeComposition>();
+        }
+
+        public int ThemeId { get; set; }
+        public string ThemeName { get; set; }
+        public string ThemeDescription { get; set; }
+        public DateTime ThemeCreationDate { get; set; }
+        public int ThemeCreatedBy { get; set; }
+        public bool ThemeDeleted { get; set; }
+        public DateTime? ThemeDeletionDate { get; set; }
+        public int? ThemeDeletedBy { get; set; }
+
+        public virtual User ThemeCreatedByNavigation { get; set; }
+        public virtual User ThemeDeletedByNavigation { get; set; }
+        public virtual ICollection<ThemeComposition> ThemeCompositions { get; set; }
     }
 }

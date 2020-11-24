@@ -1,20 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+
+#nullable disable
 
 namespace WebApp.Models
 {
-    public class Product
+    public partial class Product
     {
-        public int Id { get; set; }
-        [StringLength(20)]
-        public string DecimalNumber { get; set; }
-        public DateTime CreationDate { get; set; }
-        public int CreatedBy { get; set; }
-        public bool Deleted { get; set; }
-        public DateTime DeletionDate { get; set; }
-        public int DeletedBy { get; set; }
-        public virtual ICollection<Tag> Tags { get; set; }
-        public virtual ICollection<ProductComposition> PurchasedProducts { get; set; }
+        public Product()
+        {
+            ProductCompositions = new HashSet<ProductComposition>();
+            ProductTags = new HashSet<ProductTag>();
+            ThemeCompositions = new HashSet<ThemeComposition>();
+        }
+
+        public int ProductId { get; set; }
+        public string ProductDecimalNumber { get; set; }
+        public DateTime ProductCreationDate { get; set; }
+        public int ProductCreatedBy { get; set; }
+        public bool ProductDeleted { get; set; }
+        public DateTime? ProductDeletionDate { get; set; }
+        public int? ProductDeletedBy { get; set; }
+
+        public virtual User ProductCreatedByNavigation { get; set; }
+        public virtual User ProductDeletedByNavigation { get; set; }
+        public virtual ICollection<ProductComposition> ProductCompositions { get; set; }
+        public virtual ICollection<ProductTag> ProductTags { get; set; }
+        public virtual ICollection<ThemeComposition> ThemeCompositions { get; set; }
     }
 }
